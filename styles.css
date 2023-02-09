@@ -26,6 +26,11 @@ button {
     border-radius: 10px;
 }
 
+button:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    cursor: pointer;
+}
+
 .result p {
     font-size: 20px;
     font-weight: bold;
