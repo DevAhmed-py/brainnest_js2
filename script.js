@@ -2,8 +2,7 @@ const playerText = document.querySelector(".playerText");
 const computerText = document.querySelector(".computerText");
 const resultText = document.querySelector(".resultText");
 const scoresText = document.querySelector(".scores");
-const playerChoice = document.querySelectorAll("#btnChoice");
-
+const playerChoice = document.querySelectorAll(".btnChoice");
 let playerScore = 0;
 let computerScore = 0;
 let maxScore = 5;
@@ -17,7 +16,7 @@ playerChoice.forEach(button => button.addEventListener("click", () => {
         }
 
     } else {
-        let player = button.innerText;
+        let player = button.id;
         let computer = computerPlay();
         playerText.textContent = `Player: ${player.toUpperCase()}`;
         computerText.textContent = `Computer: ${computer.toUpperCase()}`;
@@ -65,3 +64,7 @@ function playRound(playerSelection, computerSelection) {
     }
     return result.message;
 }
+
+document.getElementById('restartBtn').addEventListener("click", function () {
+    location.reload()
+});
